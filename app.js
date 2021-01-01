@@ -38,27 +38,27 @@ document.querySelector('.object-button').addEventListener('click', function() {
             var submitToLower = submitted.toLowerCase();
       
             if(submitToLower == 'name'){
-                  document.querySelector('.answer-part').innerHTML = `<p>Your name is <b>${user.name}</b> as you have entered.</p>`
+                  document.querySelector('.answer-part').innerHTML = `<p style="border: 3px solid rgb(9, 154, 211); border-radius: 20px;">Your name is <b>${user.name}</b> as you have entered.</p>`
             }
 
             else if (submitToLower == 'age'){
-                  document.querySelector('.answer-part').innerHTML = `<p>Your age is <b>${user.age}</b> as you have entered.</p>`
+                  document.querySelector('.answer-part').innerHTML = `<p style="border: 3px solid rgb(9, 154, 211); border-radius: 20px;">Your age is <b>${user.age}</b> as you have entered.</p>`
             }
 
             else if (submitToLower == 'institution'){
-                  document.querySelector('.answer-part').innerHTML = `<p>Your institution name is <b>${user.institution}</b> as you have entered.</p>`
+                  document.querySelector('.answer-part').innerHTML = `<p style="border: 3px solid rgb(9, 154, 211); border-radius: 20px;">Your institution name is <b>${user.institution}</b> as you have entered.</p>`
             }
 
             else if (submitToLower == 'department'){
-                  document.querySelector('.answer-part').innerHTML = `<p>Your department name is <b>${user.department}</b> as you have entered.</p>`
+                  document.querySelector('.answer-part').innerHTML = `<p style="border: 3px solid rgb(9, 154, 211); border-radius: 20px;">Your department name is <b>${user.department}</b> as you have entered.</p>`
             }
 
             else if (submitToLower == 'phone number' || submitToLower == 'phonenumber'){
-                  document.querySelector('.answer-part').innerHTML = `<p>Your phone number is <b>${user.phoneNumber}</b> as you have entered.</p>`
+                  document.querySelector('.answer-part').innerHTML = `<p style="border: 3px solid rgb(9, 154, 211); border-radius: 20px;">Your phone number is <b>${user.phoneNumber}</b> as you have entered.</p>`
             }
 
             else {
-                  document.querySelector('.answer-part').innerHTML = "Shut The Fuck Up You Dumbass! Just don't press the button without filling up the fucking box."
+                  document.querySelector('.answer-part').innerHTML = `<p style="border: 3px solid rgb(9, 123, 211); border-radius: 20px;">Shut The Fuck Up You Dumbass! Just don't press the button without filling up the fucking box.</p>`
             }
       
       })
