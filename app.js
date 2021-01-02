@@ -1,18 +1,22 @@
 var object1 = prompt("What is your name?", "Someone");
 var object2 = prompt("What is your age?", "23");
 var object3 = prompt("What is your institution name?", "MIT");
-var object4 = prompt("What is your department name?", "IT");
-var object5 = prompt("What is your phone number?", "1234567890");
+var object4 = prompt("What is your institution program name?", "CSE");
+var object5 = prompt("What is your institution department name?", "Faculty of Science & Technology");
+var object6 = prompt("What is your phone number?", "1234567890");
 
 var user = {      
             name: object1,
             age: object2,
             institution: object3,
-            department: object4,
-            phoneNumber: object5
+            institutionInfo: {
+                 program: object4,
+                 department: object5
+            },
+            phoneNumber: object6
       };
 
-var lengthOfObject = Object.keys(user).length;
+var lengthOfObject = Object.keys(user).length + 1;
 
 
 document.querySelector('.object-button').addEventListener('click', function() {
@@ -20,9 +24,9 @@ document.querySelector('.object-button').addEventListener('click', function() {
       document.querySelector('.answer-part').innerHTML = 
       `<h3>You have given us ${lengthOfObject} information about you!</h3><br>` +
 
-      `They are: <p style="font-size: 15px; font-weight: 500;">${Object.keys(user)}</p>` +
+      `They are: <p style="font-size: 15px; font-weight: 500;">Name, Age, Institution, Program, Department, Phone Number</p>` +
 
-       `Now tell us through the below box which information do you wanna see and press the submit button <br><br>` +
+      `Now tell us through the below box which information do you wanna see and press the submit button <br><br>` +
 
       `<div class="input-group mb-3">
 
@@ -49,8 +53,12 @@ document.querySelector('.object-button').addEventListener('click', function() {
                   document.querySelector('.answer-part').innerHTML = `<p style="border: 3px solid rgb(9, 154, 211); border-radius: 20px;">Your institution name is <b>${user.institution}</b> as you have entered.</p>`
             }
 
+            else if (submitToLower == 'program'){
+                  document.querySelector('.answer-part').innerHTML = `<p style="border: 3px solid rgb(9, 154, 211); border-radius: 20px;">Your department name is <b>${user.institutionInfo.program}</b> as you have entered.</p>`
+            }
+
             else if (submitToLower == 'department'){
-                  document.querySelector('.answer-part').innerHTML = `<p style="border: 3px solid rgb(9, 154, 211); border-radius: 20px;">Your department name is <b>${user.department}</b> as you have entered.</p>`
+                  document.querySelector('.answer-part').innerHTML = `<p style="border: 3px solid rgb(9, 154, 211); border-radius: 20px;">Your department name is <b>${user.institutionInfo.department}</b> as you have entered.</p>`
             }
 
             else if (submitToLower == 'phone number' || submitToLower == 'phonenumber'){
